@@ -12,21 +12,22 @@ const images = [{
     },
 ];
 
+
+for (let img of images) document.querySelector('ul').insertAdjacentHTML('beforeend', `<li><img src="${img.url}" alt="${img.alt}"  width = 300, border = 1px solid black ></li>`);
 const ul = document.querySelector('ul');
 ul.style.display = 'flex';
-// ul.style.padding = '150px';
 ul.style.justifyContent = 'space-between';
 
-images.forEach(image => {
-    let li = document.createElement('li');
-    let img = document.createElement('img');
+//      images.forEach(image => {
+//     let li = document.createElement('li');
+//      let img = document.createElement('img');
 
-    img.setAttribute('src', image.url);
-    img.setAttribute('alt', image.alt);
-    img.setAttribute('width', '300');
-    img.setAttribute('style', 'border: 1px solid black');
+//     img.setAttribute('src', image.url);
+//     img.setAttribute('alt', image.alt);
+//     img.setAttribute('width', '300');
+//     img.setAttribute('style', 'border: 1px solid black');
 
-    ul.appendChild(li);
-    li.appendChild(img);
+//     ul.appendChild(li);
+//     li.appendChild(img);
 
-});
+// });
